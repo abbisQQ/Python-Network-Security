@@ -6,3 +6,4 @@
 * Project 3. Packet Sniffer
 * Project 4. DNS Spoofer
 * Project 5. HTTP File Interceptor
+* Project 6. Code Injector
