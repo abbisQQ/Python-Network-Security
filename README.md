@@ -15,3 +15,6 @@ If you want to test them with HTTPS sites you will need to run ssl scrip.
 2. Redirect any packet that goes to port 80 to port 10000 with the command:
 * echo 1 > /proc/sys/net/ipv4/ip_forward
 * iptables -t nat -A PREROYTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+3. We still need our input and output chains to redirect all packets to quene 0 for internal testing(testing at the same machine that runs the code).
+*iptables -I INPUT -j NFQUEUE --queue-num 0
+*iptables -I OUTPUT -j NFQUEUE --queue-num 0
