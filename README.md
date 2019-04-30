@@ -8,3 +8,9 @@
 * Project 5. HTTP File Interceptor
 * Project 6. Code Injector
 * Project 7. ARP Spoofer
+
+If you want to test them with HTTPS sites you will need to run ssl scrip.
+1 Run sslstrip with the command:
+sslstrip
+2 Redirect any packet that goes to port 80 to port 10000 with the command:
+iptables -t nat -A PREROYTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
