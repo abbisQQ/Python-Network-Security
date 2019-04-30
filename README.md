@@ -18,3 +18,4 @@ If you want to test them with HTTPS sites you will need to run ssl scrip.
 3. We still need our input and output chains to redirect all packets to quene 0 for internal testing(testing at the same machine that runs the code).
 * iptables -I INPUT -j NFQUEUE --queue-num 0
 * iptables -I OUTPUT -j NFQUEUE --queue-num 0
+You will also have to modify the dport and sport in our scripts from 80 to 10000
