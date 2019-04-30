@@ -7,7 +7,8 @@ def process_packet(packet):
     scapy_packet = scapy.IP(packet.get_payload())
     if scapy_packet.haslayer(scapy.Raw):
         if scapy_packet[scapy.TCP].dport == 80:
-            if ".exe" in scapy_packet[scapy.Raw].load:
+	    #we check if its a .exe and if it is not our .exe to avoid infinite loops	
+            if ".exe" in scapy_packet[scapy.Raw].load and "https://www.rarlab.com" not scapy_packet[scapy.Raw].load:
 		print "[+] exe Request"
 		#we add the ack number from every request that request a .exe to our list
             	ack_list.append(scapy_packet[scapy.TCP].ack)
