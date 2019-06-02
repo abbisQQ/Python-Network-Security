@@ -20,3 +20,5 @@ If you want to test them with HTTPS sites you will need to run ssl scrip.
 * iptables -I INPUT -j NFQUEUE --queue-num 0
 * iptables -I OUTPUT -j NFQUEUE --queue-num 0
 4. You will also have to modify the dport and sport in our scripts from 80 to 10000
+
+# This is all for learning purposes, i am no responsible for any missuse of the above code.
