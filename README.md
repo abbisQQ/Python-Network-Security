@@ -8,7 +8,8 @@
 * Project 5. HTTP File Interceptor
 * Project 6. Code Injector
 * Project 7. ARP Spoofer
-* Project 8. WIFI Stored Password Stealing 
+* Project 8. WIFI Stored Password Stealing
+* Project 9. Backdoor for remote command execution
 
 If you want to test them with HTTPS sites you will need to run ssl scrip.
 1. Run sslstrip with the command:
