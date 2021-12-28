@@ -7,7 +7,7 @@ import time
 import winreg as reg
 from Encryptor import AES_Encryption
 import traceback
-#pyinstaller --icon=amd.ico --noconsole --onefile .\AMDConnector.py
+
 
 class ConnectorClient:
 
